@@ -67,20 +67,23 @@ class Tunel:
 
     def __init__(self, html, nome, lugar, saida):
         """Inicia a tunel."""
-        self.html, self.nome, self.lugar, self.saida = html, nome, lugar, saida
-        self.passagem = self.div = None
-        self.camara = {}
+        self.html, self.nome = html, nome
+        self.lugar, self.saida  = lugar, saida
+        self.entrada = self.passagem = self.div = None
+        Self.camara = {}
 
 
     def cria_tunel(self):
         """Cria o tunel e suas partes."""
         self.div = self.html.DIV(Id=self.nome)
-        self.passagem = self.html.DIV(Id='passa_'+self.nome)
+        self.passagem = self.html.DIV(Id='self_'+self.nome)
+        self.entrada = self.html.DIV (Id= entra_'+self.nome, width="33.33%")
+        self.saida <= self.entrada
         self.div.style.backgroundSize = 'cover'
         self.div.style.backgroundImage = 'url(%s)' % CAVEZ
         self.div.style.width = 1000
         self.div.style.height = 800
-        self.div.text = "Esse é o tunel!"
+        self.div.text = "Caverna do Carlo!"
         return self
 
 
